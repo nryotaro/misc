@@ -1,0 +1,11 @@
+#! /usr/bin/env ruby
+#
+task default: %w[build]
+
+task :build do
+  d="pj"
+  Dir.mkdir("#{d}/a/l") unless File.exists?("#{d}/a/l")
+  system "cp flattened/* #{d}/li/lib"
+  system "ant.bat -f #{d}/foo/build.xml"
+
+end
